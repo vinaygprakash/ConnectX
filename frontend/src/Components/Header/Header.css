@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vmax 0;
+  background: linear-gradient(45deg, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header > a {
+  width: 3vmax;
+  height: 3vmax;
+  margin: 0 2vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.header > a > svg {
+  font-size: 2.5vmax;
+  color: rgba(0, 0, 0, 0.6);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header > a:hover > svg {
+  color: black;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 2vmax 0;
+  }
+  .header > a {
+    width: 6vw;
+    height: 6vw;
+    margin: 0 4vw;
+  }
+  .header > a > svg {
+    font-size: 6vw;
+  }
+}

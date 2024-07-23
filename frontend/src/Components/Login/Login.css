@@ -1,0 +1,95 @@
+.login {
+  height: 100vh;
+  background: linear-gradient(45deg, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+}
+
+.loginForm {
+  background: linear-gradient(45deg, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 2vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginTitle {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 3rem;
+  color: #262626;
+  margin-bottom: 1vmax;
+}
+
+.loginInputs {
+  box-sizing: border-box;
+  padding: 1vmax;
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid black;
+  margin: 0.5vmax 0;
+  font: 400 1rem "Roboto", sans-serif;
+  outline: none;
+  background: #fafafa;
+}
+
+.forgotPasswordLink {
+  align-self: flex-end;
+  text-decoration: none;
+  margin: 1vmax 0;
+  color: #4532d1;
+}
+.forgotPasswordLink:hover {
+  color: black;
+}
+
+.loginButton {
+  margin: 1vmax 0;
+  padding: 1vmax;
+  width: 40%;
+  border: none;
+  border-radius: 10px;
+  background-color: #0095f6;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.loginButton:disabled {
+  background-color: #b2dffc;
+}
+
+.loginButton:hover:not(:disabled) {
+  background-color: white;
+}
+
+.registerLink {
+  margin-top: 1vmax;
+  text-decoration: none;
+  color: #262626;
+  font-size: 0.9rem;
+}
+
+.registerLink:hover:not(:disabled) {
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .loginForm {
+    width: 90%;
+  }
+
+  .loginInputs {
+    padding: 1vmax;
+  }
+}

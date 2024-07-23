@@ -1,0 +1,98 @@
+.newPost {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #fff5bc, #cec1ff);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+}
+
+.newPostForm {
+  background-image: linear-gradient(to right, #fff5bc, #cec1ff);
+  height: 100%;
+  width: 50%;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 2vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newPostForm > img {
+  width: 100%;
+  object-fit: cover;
+}
+.newPostForm > h3 {
+  margin: 2vmax;
+}
+
+.newPostForm > input[type="text"] {
+  width: 100%;
+  padding: 1vmax;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font: 100 1.2rem "Roboto", sans-serif;
+}
+
+.newPostForm > input[type="file"] {
+  border-radius: 30px;
+  margin: 2vmax;
+}
+
+.newPostForm > input[type="file"]::-webkit-file-upload-button {
+  background-color: rgb(38, 63, 173);
+  color: white;
+  width: 100%;
+  padding: 1vmax;
+  border-radius: 30px;
+  border: none;
+  font: 100 1.2rem "Roboto", sans-serif;
+}
+.postbtn {
+  margin: 10px 2vmax 2vmax; /* Updated margin */
+  padding: 1vmax;
+  width: 20%;
+  border: 1px solid #0095f6; 
+  border-radius: 10px;
+  background-color: #0095f6; 
+  color: white; 
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.postbtn:hover {
+  background-color: #007bb5; 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.05); 
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .newPostForm {
+    width: 100%;
+  }
+
+  .newPostForm > input {
+    padding: 4vw 8vw;
+    margin: 2vmax;
+    font: 100 1.2rem "Roboto", sans-serif;
+    margin: 4vw;
+  }
+  .newPostForm > input[type="file"] {
+    width: 100%;
+  }
+
+  .newPostForm > input[type="file"]::-webkit-file-upload-button {
+    width: 70%;
+  }
+}

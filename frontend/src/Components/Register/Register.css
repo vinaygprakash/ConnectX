@@ -1,0 +1,99 @@
+.register {
+  min-height: 100vh;
+  background: linear-gradient(45deg, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+}
+
+.registerForm {
+  background: linear-gradient(45deg, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+
+  
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 1px;
+  box-sizing: border-box;
+  padding: 2vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ border-radius: 20px;
+}
+
+.registerTitle {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 3rem;
+  color: #262626;
+  margin-bottom: 1vmax;
+}
+
+.registerInputs {
+  box-sizing: border-box;
+  padding: 1vmax;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid black;
+  margin: 0.5vmax 0;
+  font: 400 1rem "Roboto", sans-serif;
+  outline: none;
+  background: #fafafa;
+  border-radius: 15px;
+
+}
+
+.fileInput {
+  margin: 1vmax 0;
+  border-radius: 15px;
+  padding: 2px;
+  
+}
+
+.registerButton {
+  margin: 1vmax 0;
+  padding: 1vmax;
+  width: 40%;
+  border: none;
+  border-radius: 10px;
+  background-color: #0095f6;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  transition: background-color 0.3s;
+  
+}
+
+.registerButton:disabled {
+  /* color:black; */
+  background-color: #b2dffc;
+}
+
+.registerButton:hover:not(:disabled) {
+  background-color: white;
+}
+
+.loginLink:disabled {
+  margin-top: 1vmax;
+  text-decoration: none;
+  color: #262626;
+  font-size: 0.9rem;
+  
+}
+.loginLink:hover:not(:disabled) {
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .registerForm {
+    width: 90%;
+  }
+
+  .registerInputs {
+    padding: 1vmax;
+  }
+}

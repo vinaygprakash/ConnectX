@@ -1,0 +1,158 @@
+.account {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  height: 92vh;
+  background-color: #f9f9f9;
+}
+
+.accountleft {
+  background-image: linear-gradient(to right, #fff5bc, #cec1ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-right: 1px solid #e0e0e0;
+}
+
+.accountright {
+  padding: 2vmax;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 1vmax;
+}
+
+.accountright img:hover {
+  transform: scale(1.1);
+}
+
+.accountright img {
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 2vmax;
+}
+
+.accountright > h5 {
+  margin: 2vmax;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.accountright > a {
+  color: rgb(73, 73, 73);
+  text-decoration: none;
+  font: 100 1.2rem "Roboto";
+  text-align: center;
+  margin-top: 2vmax;
+  padding: 0.5vmax 1vmax;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #f0f0f0;
+}
+
+.accountright > a:hover {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.accountright > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vmax;
+}
+
+.accountright > div > button {
+  border: 1px solid #0095f6;
+  background-color: #0095f6;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5vmax 1vmax;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 0.5vmax 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.accountright > div > button:hover {
+  box-shadow: none;
+  background-color: #007bb5;
+}
+
+.accountright .deleteProfileButton {
+  border: 1px solid red;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5vmax 1vmax;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 2vmax 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.accountright .deleteProfileButton:hover {
+  box-shadow: none;
+  background-color: darkred;
+}
+
+@media screen and (max-width: 600px) {
+  .account {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .accountleft {
+    padding: 1vmax;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .accountright {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .accountright img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1vmax;
+  }
+
+  .accountright > h5 {
+    font-size: 1.2rem;
+  }
+
+  .accountright > a {
+    font: 100 1rem "Roboto";
+    margin-top: 1vmax;
+    padding: 0.5vmax;
+  }
+
+  .accountright > div > button {
+    padding: 0.5vmax;
+    font-size: 1rem;
+  }
+
+  .accountright .deleteProfileButton {
+    padding: 0.5vmax;
+    font-size: 1rem;
+    margin: 1vmax 0;
+  }
+}
