@@ -22,8 +22,8 @@ const Account = () => {
   } = useSelector((state) => state.like);
 
   const [followersToggle, setFollowersToggle] = useState(false);
-
   const [followingToggle, setFollowingToggle] = useState(false);
+
   const logoutHandler = () => {
     dispatch(logoutUser());
     alert.success("Logged out successfully");
@@ -81,33 +81,31 @@ const Account = () => {
       </div>
       <div className="accountright">
         <Avatar
-          src={user.avatar.url}
+          src={user?.avatar?.url}
           sx={{ height: "8vmax", width: "8vmax" }}
         />
 
-        <Typography variant="h5">{user.name}</Typography>
+        <Typography variant="h5">{user?.name}</Typography>
 
         <div>
           <button onClick={() => setFollowersToggle(!followersToggle)}>
             <Typography>Followers</Typography>
           </button>
-          <Typography>{user.followers.length}</Typography>
+          <Typography>{user?.followers?.length}</Typography>
         </div>
 
         <div>
           <button onClick={() => setFollowingToggle(!followingToggle)}>
             <Typography>Following</Typography>
           </button>
-          <Typography>{user.following.length}</Typography>
+          <Typography>{user?.following?.length}</Typography>
         </div>
 
         <div>
-
           <button>
-          <Typography>Posts</Typography>
-          
+            <Typography>Posts</Typography>
           </button>
-          <Typography>{user.posts.length}</Typography>
+          <Typography>{user?.posts?.length}</Typography>
         </div>
 
         <Button variant="contained" onClick={logoutHandler}>
@@ -133,7 +131,7 @@ const Account = () => {
           <div className="DialogBox">
             <Typography variant="h4">Followers</Typography>
 
-            {user && user.followers.length > 0 ? (
+            {user && user.followers && user.followers.length > 0 ? (
               user.followers.map((follower) => (
                 <User
                   key={follower._id}
@@ -157,7 +155,7 @@ const Account = () => {
           <div className="DialogBox">
             <Typography variant="h4">Following</Typography>
 
-            {user && user.following.length > 0 ? (
+            {user && user.following && user.following.length > 0 ? (
               user.following.map((follow) => (
                 <User
                   key={follow._id}
